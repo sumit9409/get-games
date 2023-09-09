@@ -1,79 +1,68 @@
-/* Import Google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Press Start 2P", cursive;
+  user-select: none;
 }
-body {
+
+.ctr {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #E3F2FD;
 }
-.wrapper {
-  width: 65vmin;
-  height: 70vmin;
-  display: flex;
-  overflow: hidden;
+
+body {
+  background: #285CA1;
+}
+
+.tabel {
+  width: 480px;
+  height: 480px;
+  background: #76AFD6;
+  border-radius: 100%;
+  border: 1px solid #0D152B;
+  box-shadow: -2px 20px 0 -3px #4283C4, -20px 20px #0D152B;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 5px;
-  background: #293447;
-  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
-.game-details {
-  color: #B8C6DC;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 20px 27px;
-  display: flex;
-  justify-content: space-between;
-}
-.play-board {
-  height: 100%;
-  width: 100%;
+
+.board {
+  width: 369.2307692308px;
+  height: 369.2307692308px;
+  background: #D3E2EA;
+  border-radius: 20px;
+  border: 1px solid #0D152B;
+  box-shadow: -10px 5px 0px -2px #192852;
   display: grid;
-  background: #212837;
-  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
-}
-.play-board .food {
-  background: #FF003D;
-}
-.play-board .head {
-  background: #60CBFF;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  padding: 12px;
 }
 
-.controls {
-  display: none;
-  justify-content: space-between;
-}
-.controls i {
-  padding: 25px 0;
+.board > span {
+  background: #76AFD6;
+  color: #fff;
+  font-size: 4em;
+  padding-left: 9px;
+  padding-top: 6px;
   text-align: center;
-  font-size: 1.3rem;
-  color: #B8C6DC;
-  width: calc(100% / 4);
+  border: 2px solid #0D152B;
+  border-radius: 5px;
   cursor: pointer;
-  border-right: 1px solid #171B26;
+  transition: all 0.2s ease;
+  box-shadow: -1.2px 2px 0px 0px #141D4C;
+}
+.board > span:hover {
+  background: #6aa8d2;
+}
+.board > span:active {
+  box-shadow: -1.2px 7.4px 0px -2.5px #141D4C;
 }
 
-@media screen and (max-width: 800px) {
-  .wrapper {
-    width: 90vmin;
-    height: 115vmin;
-  }
-  .game-details {
-    font-size: 1rem;
-    padding: 15px 27px;
-  }
-  .controls {
-    display: flex;
-  }
-  .controls i {
-    padding: 15px 0;
-    font-size: 1rem;
-  }
+#reset {
+  margin-top: 14px;
+  color: #fff;
+}
+
+.win {
+  background: #55efc4 !important;
 }
