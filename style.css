@@ -1,68 +1,88 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
-  font-family: "Press Start 2P", cursive;
-  user-select: none;
-}
-
-.ctr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #285CA1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #25335b;
 }
 
-.tabel {
-  width: 480px;
-  height: 480px;
-  background: #76AFD6;
-  border-radius: 100%;
-  border: 1px solid #0D152B;
-  box-shadow: -2px 20px 0 -3px #4283C4, -20px 20px #0D152B;
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.container {
+  position: relative;
+  top: -80px;
+  transform: skewY(-20deg);
+  animation: animate 5s linear infinite;
+}
+.container .cube {
+  position: relative;
+  z-index: 2;
+}
+.container .cube:nth-child(2) {
+  z-index: 1;
+  translate: -60px -60px;
+}
+.container .cube:nth-child(3) {
+  z-index: 3;
+  translate: 60px 60px;
+}
+.container .cube div {
+  position: absolute;
+  display: flex;
   flex-direction: column;
+  gap: 30px;
+  translate: calc(-70px * var(--x)) calc(-60px * var(--y));
 }
-
-.board {
-  width: 369.2307692308px;
-  height: 369.2307692308px;
-  background: #D3E2EA;
-  border-radius: 20px;
-  border: 1px solid #0D152B;
-  box-shadow: -10px 5px 0px -2px #192852;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8px;
-  padding: 12px;
+.container .cube div span {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #dcdcdc;
+  z-index: calc(1 * var(--i));
+  transition: 1.5s;
 }
-
-.board > span {
-  background: #76AFD6;
-  color: #fff;
-  font-size: 4em;
-  padding-left: 9px;
-  padding-top: 6px;
-  text-align: center;
-  border: 2px solid #0D152B;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: -1.2px 2px 0px 0px #141D4C;
+.container .cube div span:hover {
+  transition: 0s;
+  background: #ef4149;
+  filter: drop-shadow(0 0 30px #ef4149);
 }
-.board > span:hover {
-  background: #6aa8d2;
+.container .cube div span:hover:before, .container .cube div span:hover:after {
+  transition: 0s;
+  background: #ef4149;
 }
-.board > span:active {
-  box-shadow: -1.2px 7.4px 0px -2.5px #141D4C;
+.container .cube div span:before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #fff;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 1.5s;
 }
-
-#reset {
-  margin-top: 14px;
-  color: #fff;
-}
-
-.win {
-  background: #55efc4 !important;
+.container .cube div span:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #f2f2f2;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 1.5s;
 }
