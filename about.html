@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="icon" href="C:\Users\sumit\Downloads\photo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+  </style>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="C:\Users\sumit\Desktop\index.html">Home</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>We are a team of passionate engineers and designers who are dedicated to creating innovative and user-friendly web. We believe that technology has the power to make the world a better place, and we are committed to using our skills and expertise to make a positive impact.</p>
+        <p>Our team has a diverse range of skills and experience, and we are always looking for new ways to challenge ourselves and learn new things. We are passionate about creating webs that are both beautiful and functional, and we believe that good design can make a real difference in people's lives.</p>
+        <h2>Our Mission</h2>
+        <p>Our mission is to create innovative and user-friendly products that make a positive impact on the world.</p>
+
+        <h2>Our Values</h2>
+        <p>We are always looking for new ways to improve our website.
+         We believe that our web should be easy to use and accessible to everyone.
+         We are committed to using our skills and expertise to make a positive impact on the world.</p>
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="F:\owner\Pictures\Instagram\IMG_20210704_194023_215.jpg" alt="Jane" style="width:100%">
+            <div class="container">
+                <h5>SUMIT CHAUDHARY</h5>
+              <hr>
+              <p>&#9993;sumitchaudhary9409@gmail.com</p>
+              <p>&#9990;9409553232</p>
+              <p><a href="sumitchaudhary9409@gmail.com"><button class="button">Contact</button></p></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="C:\Users\sumit\Desktop\IMG_20230613_205328_788.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h5>MIHIR RAWAT</h5>
+              <hr>
+              <p>&#9993;mihirrawat9409@gmail.com</p>
+              <p>&#9990;9327609304</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="C:\Users\sumit\Desktop\IMG_20230816_115314_311.jpg" alt="Jane" style="width:100%">
+            <div class="container">
+                <h5>SANJAY SUNDHESHA</h5>
+              <hr>
+              <p>&#9993;sundheshasanjay010@gmail.com</p>
+              <p>&#9990;7383808891</p>
+              <p><a href="sumitchaudhary9409@gmail.com"><button class="button">Contact</button></p></a>
+            </div>
+          </div>
+        </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
